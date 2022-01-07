@@ -7,7 +7,7 @@ import os
 import re
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = os.environ["5052808423:AAGL9xY4r16WfPsAr111BJiQcUuOoymJ1lQ"]
+TOKEN = "5052808423:AAGL9xY4r16WfPsAr111BJiQcUuOoymJ1lQ"
 
 def song(update, context):
     text = update.message.text
