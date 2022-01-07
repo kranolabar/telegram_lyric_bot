@@ -38,8 +38,7 @@ def song(update, context):
 
         return lyrics
     lyrics = print_lyrics()
-    chat_id = update.message.chat.id
-    update.message.reply_text(chat_id=chat_id, message=lyrics)
+    update.message.reply_text(lyrics)
     return
 
 def main():
