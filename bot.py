@@ -39,14 +39,14 @@ def song(update, context):
         return lyrics
     lyrics = print_lyrics()
     chat_id = update.message.chat.id
-    context.bot.send_message(chat_id=chat_id, text=lyrics)
+    update.message.reply_text(chat_id=chat_id, message=lyrics)
     return
 
 def main():
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
 
-    dp.add_handler(CommandHandler('song', song))
+    dp.add_handler(MessageHandler(Filters.text, song))
 
     updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
