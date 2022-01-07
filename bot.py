@@ -52,6 +52,7 @@ def main():
                           port=int(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook('https://glcc-lyric-bot.herokuapp.com/' + TOKEN)
+    updater.start_polling()
     updater.idle()
 
 if __name__ == '__main__':
